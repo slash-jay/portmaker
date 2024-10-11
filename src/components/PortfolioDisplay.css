@@ -1,0 +1,131 @@
+/* Background Animation */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(270deg, #1a2a6c, #b21f1f, #fcb045);
+  background-size: 300% 300%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Portfolio Display Styling */
+.portfolio-display {
+  position: relative;
+  padding: 40px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #e91e63;
+  transform: scale(1.1);
+}
+
+/* Section Headings */
+h1, h2 {
+  text-align: center;
+  margin: 30px 0;
+  transition: transform 0.3s ease;
+  font-size: 2rem;
+}
+
+/* General Card Styling for Sections */
+.journey-item, .skill-item, .project-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.journey-item:hover, .skill-item:hover, .project-item:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Profile and Project Image Styling */
+.profile-picture, .project-image {
+  max-width: 100%;
+  border-radius: 15px;
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+.profile-picture:hover, .project-image:hover {
+  transform: scale(1.1);
+}
+
+/* CV Link Styling */
+.cv-link {
+  display: inline-block;
+  background: #e91e63;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cv-link:hover {
+  background: #d81b60;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-display {
+    padding: 20px;
+  }
+}
